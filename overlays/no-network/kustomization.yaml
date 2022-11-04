@@ -1,0 +1,9 @@
+bases:
+- ../../base
+
+# Apply patches with these files
+patchesStrategicMerge:
+- rm-networking.yaml
+
+# Ensure the namespace on all resources is the same
+namespace: hello-world

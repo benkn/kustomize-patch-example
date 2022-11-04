@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  labels:
+    app.kubernetes.io/name: hello-world
+  name: hello-world
+spec:
+  ingress:
+  - from: 
+    - ipBlock:
+        cidr: 172.17.0.0/16
+    ports:
+    - port: 80
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: hello-world
+  policyTypes:
+  - Ingress

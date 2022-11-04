@@ -1,0 +1,5 @@
+resources:
+- hello-world-deployment.yaml
+- hello-world-networkpolicy.yaml
+- hello-world-ingress.yaml
+- hello-world-svc.yaml
